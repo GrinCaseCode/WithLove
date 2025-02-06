@@ -672,7 +672,7 @@
     }
     .footer__info {
         max-width: 225px;
-    }
+    } 
     .footer-bottom {
         gap: 20px 15px;
         flex-wrap: wrap;
@@ -687,12 +687,15 @@
     }
     .header__bottom {
         padding: 15px;
+        padding-bottom: 60px;
         top: 100%;
         left: 0;
         width: 100%;
         background: #111416;
         position: absolute;
+        max-height: calc(100vh - 80px);
         display: none;
+        overflow: auto;
     }
     .menu {
         display: block;
@@ -844,6 +847,9 @@
     }
     .slider-catalog {
         padding-bottom: 40px;
+    }
+    .tab-container {
+        padding-top: 35px;
     }
 }
 
