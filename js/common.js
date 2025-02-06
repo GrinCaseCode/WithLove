@@ -105,12 +105,16 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 				breakpoint: 992,
 				settings: {
 					slidesToShow: 2,
+					arrows: false,
+					dots: true,
 				}
 			},
 			{
 				breakpoint: 768,
 				settings: {
 					slidesToShow: 1,
+					arrows: false,
+					dots: true,
 				}
 			}
 			]
