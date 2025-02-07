@@ -202,10 +202,15 @@ jQuery('.quantity').each(function() {
 
 $('.basket-wrap .btn-header').click(function(event) {
 	event.preventDefault();
-	$(".header__bottom").slideUp(200);
-	$("body").removeClass("no-scroll");
-	$(".sandwich").removeClass("active");
-	$(".menu-overlay").fadeOut(200);
+	{
+		if ($(window).width() < 992) { 
+			$(".header__bottom").slideUp(200);
+			$("body").removeClass("no-scroll");
+			$(".sandwich").removeClass("active");
+			$(".menu-overlay").fadeOut(200);
+		}
+	}
+
 	if ($(".basket-popup").is(":hidden")) {
 		$(".basket-popup").fadeIn(200);
 		$(this).addClass("active");
