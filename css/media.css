@@ -981,6 +981,9 @@
         background: #edccba;
         color: #101010;
     }
+    .btn-social:hover .btn-social__icon {
+        background: rgba(255, 255, 255, 0.7);
+    }
 }
 
 @media (hover: none) {
@@ -1032,5 +1035,8 @@
     .slick-arrow:active {
         background: #edccba;
         color: #101010;
+    }
+    .btn-social:active .btn-social__icon {
+        background: rgba(255, 255, 255, 0.7);
     }
 }
