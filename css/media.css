@@ -185,6 +185,18 @@
         width: 138px;
         height: 45px;
     }
+    .share-popup {
+        width: 355px;
+        padding: 50px;
+    }
+    .btn-social {
+        font-size: 15px;
+        margin-bottom: 19px;
+        gap: 10px;
+    }
+    .btn-social__descr {
+        font-size: 11px;
+    }
 }
 @media only screen and (max-width : 1600px) {
     body {
@@ -850,6 +862,16 @@
     }
     .tab-container {
         padding-top: 35px;
+    }
+    .share-wrap {
+        position: static;
+    }
+    .share-popup {
+        padding: 25px 20px;
+        right: 0;
+        left: 0;
+        margin: 0;
+        width: auto;
     }
 }
 

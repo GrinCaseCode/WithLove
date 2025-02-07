@@ -220,11 +220,39 @@ $('.basket-wrap .btn-header').click(function(event) {
 	}
 }); 
 
+$('.share-wrap .btn-header').click(function(event) {
+	event.preventDefault();
+	{
+		if ($(window).width() < 992) { 
+			$(".header__bottom").slideUp(200);
+			$("body").removeClass("no-scroll");
+			$(".sandwich").removeClass("active");
+			$(".menu-overlay").fadeOut(200);
+		}
+	}
+
+	if ($(".share-popup").is(":hidden")) {
+		$(".share-popup").fadeIn(200);
+		$(this).addClass("active");
+	} else {
+		$(".share-popup").fadeOut(0);
+		$(this).removeClass("active");
+	}
+}); 
+
 $(document).mouseup(function (e) {
     var container = $(".basket-wrap");
     if (container.has(e.target).length === 0){
 		$(".basket-popup").fadeOut(0);
 		$('.basket-wrap .btn-header').removeClass("active");
+    }
+  });
+
+  $(document).mouseup(function (e) {
+    var container = $(".share-wrap");
+    if (container.has(e.target).length === 0){
+		$(".share-popup").fadeOut(0);
+		$('.share-wrap .btn-header').removeClass("active");
     }
   });
 
