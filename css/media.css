@@ -1537,11 +1537,8 @@
     .team {
         padding-bottom: 50px;
     }
-    .range-inputs .item-form {
-        margin-bottom: 16px;
-    }
-    .range-inputs .item-form:last-child {
-        margin-bottom: 0;
+    .range-inputs {
+        display: flex;
     }
 }
 
