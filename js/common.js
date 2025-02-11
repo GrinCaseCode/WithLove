@@ -166,7 +166,7 @@ $('.tabs li a').click(function(event) {
 	var textTab = $(this).html();
 	$(this).parent().parent().find("li").removeClass('active');
 	$(this).parent().addClass('active');
-	$(this).parents(".catalog").find(".tab-pane").fadeOut(0);
+	$(".tab-pane").fadeOut(0);
 	var selectTab = $(this).attr("href");
 	$(selectTab).fadeIn(200);
 	$(".tab-pane .slider-catalog").slick('setPosition');

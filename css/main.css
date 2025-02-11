@@ -1319,7 +1319,6 @@ input[type=number]
 	letter-spacing: 0.01em;
 	color: rgba(255, 255, 255, 0.64);
 	font-weight: 400;
-	display: flex;
 	text-align: left;
 }
 .checkbox-main label {
@@ -1674,6 +1673,7 @@ input[type=number]
 }
 .item-toggle__content {
 	padding-top: 15px;
+	display: none;
 }
 .tabs_card {
 	margin-top: 96px;
