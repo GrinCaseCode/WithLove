@@ -1,22 +1,12 @@
 $(document).ready(function() {
 
 
-//прилипающие меню
-var $menu = $(".header");
-$(window).scroll(function(){
-  if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
-    $menu.removeClass("default").addClass("fixed");
-  } else if($(this).scrollTop() <= 0 && $menu.hasClass("fixed")) {
-    $menu.removeClass("fixed").addClass("default");
-  }
-  
+  //sidebar catalog
+  $(".btn-main_filter").click(function(e) {
+	e.preventDefault();
+	$(this).toggleClass("active");
+	$(".sidebar-catalog").slideToggle(200);
 });
-
-if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
-    $menu.removeClass("default").addClass("fixed");
-  } else if($(this).scrollTop() <= 0 && $menu.hasClass("fixed")) {
-    $menu.removeClass("fixed").addClass("default");
-  }
 
 	//плавный скролл
 	$(".navigat li a").mPageScroll2id();
@@ -143,6 +133,18 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 			]
 		});
 
+		$('.slider-card').slick({
+			arrows: true,
+			dots: true,
+			infinite: true,
+			touchThreshold: 1000,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			speed: 1500,
+			prevArrow: '<div class="slick-prev slick-arrow"><i class="fal fa-chevron-left"></i><div/>',
+			nextArrow: '<div class="slick-next slick-arrow"><i class="fal fa-chevron-right"></i><div/>',
+		});
+
 	$(".input-phone").mask("+7 (999) 999-99-99");
 
 
@@ -171,6 +173,33 @@ $('.tabs li a').click(function(event) {
 	$(this).parent().parent().siblings(".btn-tab").html(textTab);
 	$(this).parent().parent().siblings(".btn-tab").removeClass("active");	
 }); 
+
+//switch adds
+$('.item-toggle .switch').click(function(event) {
+	$(this).closest(".item-toggle").toggleClass("active");
+	$(this).closest(".item-toggle").find(".item-toggle__content").slideToggle(200);
+}); 
+//card adds
+function updateItemState($input) {
+	let value = parseInt($input.val(), 10);
+	let $item = $input.closest('.item-add');
+
+	if (value > 1) {
+		$item.addClass('active');
+	} else {
+		$item.removeClass('active');
+	}
+}
+
+// Проверяем все инпуты при загрузке страницы
+$('.item-add input[type="number"]').each(function() {
+	updateItemState($(this));
+});
+
+// Отслеживаем изменения в input
+$('.item-add input[type="number"]').on('input change', function() {
+	updateItemState($(this));
+});
 
 jQuery('.quantity').each(function() {
 	var spinner = jQuery(this),
@@ -271,6 +300,23 @@ $(document).mouseup(function (e) {
 		backFocus: false,
 	});
 
+	$(".fancybox-gallery").fancybox({
+		autoFocus: false,
+		backFocus: false,
+		buttons: ["close"], // Оставляем только кнопку закрытия
+		btnTpl: {
+			close:
+				'<button data-fancybox-close class="fancybox-button fancybox-close-custom" title="Close">' +
+				'<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg>' +
+				"</button>"
+		},
+		afterShow: function (instance, current) {
+			$(".fancybox-content").append($(".fancybox-close-custom"));
+		},
+		beforeShow: function (instance, current) {
+			$(".fancybox-container").addClass("fancybox-gallery-container");
+		}
+	});
 
 	//Кнопка "Наверх"
 	//Документация:
