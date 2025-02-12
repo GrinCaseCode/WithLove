@@ -208,6 +208,7 @@
     .item-form .jq-selectbox {
         font-size: 14px;
     }
+    .radio-main,
     .checkbox-main {
         font-size: 14px;
     }
@@ -1704,7 +1705,7 @@
         padding-top: 5px;
     }
     .item-dropdown__head {
-        font-size: 22px;
+        font-size: 20px;
         padding: 20px;
         line-height: 130%;
     }
@@ -1774,6 +1775,9 @@
         padding-top: 10px;
         margin-bottom: 25px;
     }
+    .page-recommendations .breadcrumbs + .title-section {
+        max-width: 300px;
+    }
     .unit-recommendation .image-page {
         margin-top: 0;
     }
@@ -1788,6 +1792,19 @@
     }
     .row_top.row.row_recommendations {
         margin-bottom: -25px;
+    }
+    .form-default__title {
+        font-size: 17px;
+        margin-bottom: 19px;
+    }
+    .service-top .btn-main {
+        width: 100%;
+    }
+    .feedback__block .title-section {
+        max-width: 300px;
+    }
+    .page-recommendations {
+        padding-bottom: 40px;
     }
 }
 
