@@ -1,5 +1,18 @@
 $(document).ready(function() {
 
+	//vacancies
+
+	$(".item-dropdown__head").click(function() {
+		$(".item-dropdown").removeClass("active");
+		$(".item-dropdown__content").slideUp(200);
+		if ($(this).siblings().is(":hidden")) {
+			$(this).parent().addClass("active");
+			$(this).siblings().slideDown(200);
+		} else {
+			$(this).parent().removeClass("active");
+			$(this).siblings().slideUp(200);
+		}
+	  });
 
   //sidebar catalog
   $(".btn-main_filter").click(function(e) {
