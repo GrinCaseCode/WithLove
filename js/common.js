@@ -30,10 +30,6 @@ $(document).ready(function() {
 	$(".sidebar-catalog").slideToggle(200);
 });
 
-	//плавный скролл
-	$(".navigat li a").mPageScroll2id();
-
-
 	//кнопка sandwich
 	$(".sandwich").click(function() {
 		if ($(".header__bottom").is(":hidden")) {
@@ -363,16 +359,6 @@ $(document).mouseup(function (e) {
 		}
 	});
 
-	//Кнопка "Наверх"
-	//Документация:
-	//http://api.jquery.com/scrolltop/
-	//http://api.jquery.com/animate/
-	$(".btn_top").click(function () {
-		$("body, html").animate({
-			scrollTop: 0
-		}, 800);
-		return false;
-	});
 
 	objectFitImages();
 
