@@ -2110,6 +2110,9 @@
     .page-error .btn-main {
         padding: 0 35px;
     }
+    .unit-contact__title {
+        font-size: 20px;
+    }
 }
 
 /* Small Devices, Tablets */
