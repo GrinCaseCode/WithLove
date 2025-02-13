@@ -2113,6 +2113,9 @@
     .unit-contact__title {
         font-size: 20px;
     }
+    .checkout-form .agree-form {
+        text-align: center;
+    }
 }
 
 /* Small Devices, Tablets */
