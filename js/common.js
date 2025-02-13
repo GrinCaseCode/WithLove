@@ -234,7 +234,7 @@ function updateItemState($input) {
 $('.radios-wrap_socials input').on('change', function () {
 	let index = $('.radios-wrap_socials input').index(this);
 	$('.item-form_socials input').hide().eq(index).show();
-}).trigger('change');
+});
 
 // Проверяем все инпуты при загрузке страницы
 $('.item-add input[type="number"]').each(function() {
