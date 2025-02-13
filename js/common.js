@@ -14,6 +14,15 @@ $(document).ready(function() {
 		}
 	  });
 
+	  //datatime
+	  $('.input-datatime').datetimepicker({
+		dayOfWeekStart : 1,
+		lang:'ru',
+		formatDate:'Y/m/d',
+	});
+
+	$.datetimepicker.setLocale('ru');
+
   //sidebar catalog
   $(".btn-main_filter").click(function(e) {
 	e.preventDefault();
@@ -77,6 +86,22 @@ $(document).ready(function() {
 			} else {
 				$(this).siblings(".menu-dropdown").slideUp(200);
 				$(this).parent().removeClass("opened");
+			}
+		});
+
+		$(".menu-dropdown__content_haschild > .menu-dropdown__title").click(function(e) {
+			e.preventDefault();
+			$(".menu-dropdown__content ul").slideUp(200);
+			$(".menu-dropdown__title").removeClass("active");
+			$(".menu-dropdown .col-lg-6").removeClass("active");
+			if ($(this).siblings("ul").is(":hidden")) {
+				$(this).siblings("ul").slideDown(200);
+				$(this).addClass("active");
+				$(this).parents(".col-lg-6").addClass("active");
+			} else {
+				$(this).siblings("ul").slideUp(200);
+				$(this).removeClass("active");
+				$(this).parents(".col-lg-6").removeClass("active");
 			}
 		});
 	}
@@ -203,6 +228,13 @@ function updateItemState($input) {
 		$item.removeClass('active');
 	}
 }
+
+//social radios
+
+$('.radios-wrap_socials input').on('change', function () {
+	let index = $('.radios-wrap_socials input').index(this);
+	$('.item-form_socials input').hide().eq(index).show();
+}).trigger('change');
 
 // Проверяем все инпуты при загрузке страницы
 $('.item-add input[type="number"]').each(function() {
