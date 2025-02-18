@@ -542,10 +542,10 @@
     }
 
     .billbord__image img {
-        max-width: 420px;
+        max-width: 440px;
     }
     .billbord__content {
-        padding-top: 45px;
+        padding-top: 50px;
     }
 }
 @media only screen and (max-width : 1600px) {
@@ -965,7 +965,7 @@
     }
 
     .billbord__image img {
-        max-width: 380px;
+        max-width: 400px;
     }
 }
 
