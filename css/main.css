@@ -983,7 +983,7 @@ form {
 	position: absolute;	
 	box-shadow: 0 4px 64px 0 rgba(0, 0, 0, 0.32);
 	background: rgba(17, 20, 22, 0.98);
-	border: 1px solid rgba(237, 204, 186, 0.16);
+	border: 1px solid rgba(255, 255, 255, 0.08);
 	display: none;
 	border-radius: 8px;
 	z-index: 1;
@@ -1163,7 +1163,7 @@ input[type=number]
 	position: absolute;
 	box-shadow: 0 4px 64px 0 rgba(0, 0, 0, 0.32);
 	background: rgba(17, 20, 22, 0.98);
-	border: 1px solid rgba(255, 255, 255, 0.16);
+	border: 1px solid rgba(255, 255, 255, 0.08);
 	z-index: 10;
 	border-radius: 8px;
 	display: none;
