@@ -215,12 +215,13 @@ form {
 	margin-bottom: -50px;
 }
 .billbord__image img {
-	max-width: 520px;
+	min-height: 600px;
+    height: 72vh;
+    width: auto;
+    max-width: initial;
 	margin: 0 auto;
-	height: auto;
 }
 .billbord__content {
-	padding-top: 80px;
 	margin-right: -137px;
 	margin-left: 70px;
 	position: relative;
@@ -982,6 +983,7 @@ form {
 	position: absolute;	
 	box-shadow: 0 4px 64px 0 rgba(0, 0, 0, 0.32);
 	background: rgba(17, 20, 22, 0.98);
+	border: 1px solid rgba(237, 204, 186, 0.16);
 	display: none;
 	border-radius: 8px;
 	z-index: 1;
@@ -1161,6 +1163,7 @@ input[type=number]
 	position: absolute;
 	box-shadow: 0 4px 64px 0 rgba(0, 0, 0, 0.32);
 	background: rgba(17, 20, 22, 0.98);
+	border: 1px solid rgba(255, 255, 255, 0.16);
 	z-index: 10;
 	border-radius: 8px;
 	display: none;
